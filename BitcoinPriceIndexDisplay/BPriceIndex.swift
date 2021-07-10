@@ -7,3 +7,12 @@
 
 import Foundation
 
+class BPriceIndex: Codable {
+    var time = ""
+    var disclaimer = ""
+    
+    enum CodingKeys: String, CodingKey{
+        case time
+        case disclaimer
+    }
+}
