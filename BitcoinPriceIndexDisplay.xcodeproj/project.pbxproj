@@ -13,6 +13,8 @@
 		624057BF269A123B00EB4A3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 624057BE269A123B00EB4A3E /* Assets.xcassets */; };
 		624057C2269A123B00EB4A3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 624057C0269A123B00EB4A3E /* LaunchScreen.storyboard */; };
 		624057CA269A13A800EB4A3E /* BPriceIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624057C9269A13A800EB4A3E /* BPriceIndex.swift */; };
+		624057CC269A147B00EB4A3E /* BPITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624057CB269A147B00EB4A3E /* BPITableViewController.swift */; };
+		624057CE269A168E00EB4A3E /* BPITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624057CD269A168E00EB4A3E /* BPITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		624057C1269A123B00EB4A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		624057C3269A123B00EB4A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		624057C9269A13A800EB4A3E /* BPriceIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPriceIndex.swift; sourceTree = "<group>"; };
+		624057CB269A147B00EB4A3E /* BPITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPITableViewController.swift; sourceTree = "<group>"; };
+		624057CD269A168E00EB4A3E /* BPITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				624057B5269A123300EB4A3E /* AppDelegate.swift */,
 				624057B7269A123300EB4A3E /* SceneDelegate.swift */,
+				624057C9269A13A800EB4A3E /* BPriceIndex.swift */,
+				624057CD269A168E00EB4A3E /* BPITableViewCell.swift */,
+				624057CB269A147B00EB4A3E /* BPITableViewController.swift */,
 				624057BB269A123300EB4A3E /* Main.storyboard */,
 				624057BE269A123B00EB4A3E /* Assets.xcassets */,
 				624057C0269A123B00EB4A3E /* LaunchScreen.storyboard */,
 				624057C3269A123B00EB4A3E /* Info.plist */,
-				624057C9269A13A800EB4A3E /* BPriceIndex.swift */,
 			);
 			path = BitcoinPriceIndexDisplay;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				624057CA269A13A800EB4A3E /* BPriceIndex.swift in Sources */,
+				624057CC269A147B00EB4A3E /* BPITableViewController.swift in Sources */,
+				624057CE269A168E00EB4A3E /* BPITableViewCell.swift in Sources */,
 				624057B6269A123300EB4A3E /* AppDelegate.swift in Sources */,
 				624057B8269A123300EB4A3E /* SceneDelegate.swift in Sources */,
 			);

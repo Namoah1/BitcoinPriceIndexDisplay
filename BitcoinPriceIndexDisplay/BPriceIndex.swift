@@ -8,11 +8,11 @@
 import Foundation
 
 class BPriceIndex: Codable {
-    var time = ""
-    var disclaimer = ""
+    var name = ""
+    var price = Float()
     
     enum CodingKeys: String, CodingKey{
-        case time
-        case disclaimer
+        case name
+        case price 
     }
 }
