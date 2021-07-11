@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BPriceIndex: Codable {
+struct BPriceIndex: Codable {
     var name = ""
     var price = Float()
     
