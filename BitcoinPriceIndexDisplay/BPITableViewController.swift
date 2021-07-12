@@ -30,7 +30,8 @@ class BPITableViewController: UITableViewController {
                         if let bpiFromAPI = try? JSONDecoder().decode([BPriceIndex].self, from: data!){
                             
                             DispatchQueue.main.async {
-                                self.bpis = bpiFromAPI
+                                self.bpis = bpiFromAPI.sorted(by: {
+                                    $0.price < $1.price })
                                 self.tableView.reloadData()
                             }
                             
