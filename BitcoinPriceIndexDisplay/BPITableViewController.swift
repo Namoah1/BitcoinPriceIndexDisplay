@@ -58,6 +58,19 @@ class BPITableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBPI = bpis[indexPath.row]
+        performSegue(withIdentifier: "ShowDetails", sender: selectedBPI)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? DetailViewController{
+            if let selectedBPI = sender as? BPriceIndex {
+                destinationVC.bpIndex = selectedBPI
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }

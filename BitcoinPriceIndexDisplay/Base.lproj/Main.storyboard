@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pVo-sg-vsl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egz-f7-Y6t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--BPI-->
         <scene sceneID="7Qa-0T-Ham">
             <objects>
                 <tableViewController id="pVo-sg-vsl" customClass="BPITableViewController" customModule="BitcoinPriceIndexDisplay" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,6 +38,8 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tMH-Jh-Tmk" secondAttribute="trailing" constant="20" symbolic="YES" id="Rq7-pC-W7J"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4FI-ug-9GA" secondAttribute="trailing" constant="20" symbolic="YES" id="cAs-vc-jXg"/>
                                         <constraint firstItem="tMH-Jh-Tmk" firstAttribute="top" secondItem="NzY-ya-krj" secondAttribute="topMargin" constant="10" id="oyn-J5-iaI"/>
                                         <constraint firstItem="4FI-ug-9GA" firstAttribute="leading" secondItem="NzY-ya-krj" secondAttribute="leadingMargin" constant="20" id="rpw-KY-AY7"/>
                                         <constraint firstItem="tMH-Jh-Tmk" firstAttribute="leading" secondItem="NzY-ya-krj" secondAttribute="leadingMargin" constant="20" id="u04-y2-S2E"/>
@@ -54,8 +57,62 @@
                             <outlet property="delegate" destination="pVo-sg-vsl" id="BXb-aN-O72"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="BPI" id="bVU-ao-xtG">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="NZ6-Te-qhK"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="y7N-Eg-etG" kind="presentation" identifier="ShowDetails" id="tpk-fM-6BL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDp-rc-bfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043.4782608695652" y="118.52678571428571"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="ZaD-SQ-anI">
+            <objects>
+                <viewController id="y7N-Eg-etG" customClass="DetailViewController" customModule="BitcoinPriceIndexDisplay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="07k-r1-XN8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAx-KM-NaZ">
+                                <rect key="frame" x="178.5" y="406.5" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8zx-cf-tb7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lAx-KM-NaZ" firstAttribute="centerY" secondItem="07k-r1-XN8" secondAttribute="centerY" id="1xe-tQ-Aw6"/>
+                            <constraint firstItem="lAx-KM-NaZ" firstAttribute="centerX" secondItem="07k-r1-XN8" secondAttribute="centerX" id="VpL-Ad-YvJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailLabel" destination="lAx-KM-NaZ" id="Mlx-Ji-mOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xn4-VJ-39b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934.7826086956522" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pgh-hh-f8L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="egz-f7-Y6t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vGt-6l-Bg5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pVo-sg-vsl" kind="relationship" relationship="rootViewController" id="Bbs-Hz-gvv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LZ1-bn-i4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133.33333333333334" y="118.52678571428571"/>
         </scene>
